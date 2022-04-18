@@ -11,7 +11,6 @@ const gaugeEl = ref(null);
 const gauge = ref(null);
 
 onMounted(() => {
-  console.log(gaugeEl);
   gauge.value = new Gauge(gaugeEl.value).setOptions({ fontSize: 41 }); // create sexy gauge!
   gauge.value.maxValue = 15000; // set max gauge value
   gauge.value.setMinValue(0); // set min value
