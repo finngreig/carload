@@ -9,6 +9,7 @@ export const getChargers = async () => {
 
 export const calculateTotalPower = (location) => {
   const totalPower = location.chargers
+    .filter((charger) => charger.isChargeNow === true)
     .flatMap((c) => c.outlets)
     .reduce((total, charger) => total + charger.power, 0);
   return totalPower / 1000 / 1000;
