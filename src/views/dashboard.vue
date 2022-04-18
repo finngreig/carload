@@ -36,5 +36,9 @@ onMounted(async () => {
     <div class="w3-row">
       <AreaList :areas="chargerAreas" />
     </div>
+    <div class="w3-row">
+      <h1>ChargeNet Map</h1>
+      <iframe src="https://map.charge.net.nz" width="100%" height="500pt"></iframe>
+    </div>
   </div>
 </template>
